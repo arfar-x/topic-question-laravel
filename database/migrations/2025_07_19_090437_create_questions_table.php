@@ -15,7 +15,7 @@ return new class extends Migration
             $table->id();
             $table->text('question');
             $table->json('options');
-            $table->tinyInteger('correct_answer');
+            $table->tinyInteger('answer');
             $table->timestamps();
 
             $table->foreignId('topic_id')->constrained('topics');
