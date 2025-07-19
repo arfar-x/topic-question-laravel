@@ -10,6 +10,10 @@ class Question extends Model
 {
     use HasFactory;
 
+    protected $casts = [
+        'options' => 'array',
+    ];
+
     public function topic(): BelongsTo
     {
         return $this->belongsTo(Topic::class, 'parent_id');
